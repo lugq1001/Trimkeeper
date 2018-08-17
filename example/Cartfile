@@ -1,0 +1,19 @@
+
+# https://github.com/Alamofire/Alamofire
+github "Alamofire/Alamofire" ~> 4.7
+
+# https://github.com/ReactiveX/RxSwift
+github "ReactiveX/RxSwift" ~> 4.0
+
+# https://github.com/robbiehanson/CocoaAsyncSocket
+github "robbiehanson/CocoaAsyncSocket" "master"
+
+
+
+
+
+
+
+
+
+
