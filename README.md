@@ -42,7 +42,7 @@ sdk目前不控制打印机自动重连，需要App监听状态，手动维持�
 ```swift
 do {
 	let printer = Printer(host: "192.168.15.135", mode: .avery9419)
-    try Trimkeeper.shared.connectPrinter(printer)
+	try Trimkeeper.shared.connectPrinter(printer)
 } catch let error {
 	//连接失败
 	print(error.toTrimkeeperError.description)
@@ -78,6 +78,7 @@ Trimkeeper.shared.sendAssetsToPrinter{ trimkeeperError in
 		print(error.description)
 	} else {
 		// 发送成功
+		// ...
 	}
 }
 ```
@@ -111,7 +112,7 @@ do {
 
 func trimkeeper(didConnectTo printer: Printer) {
 	print("打印机 \(printer) 连接成功")
-    // ...
+	// ...
 }
 ```
 
