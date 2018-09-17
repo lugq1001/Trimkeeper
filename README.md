@@ -137,6 +137,10 @@ func trimkeeper(didDisconnectTo printer: Printer, withError error: TrimkeeperErr
 
 ## CHANGELOG
 
+> ## [1.0.1](https://github.com/lugq1001/Trimkeeper) (2018-09-17)
+>
+> **增加模拟器支持**
+
 > ## [1.0.0](https://github.com/lugq1001/Trimkeeper) (2018-08-15)
 >
 > **增加打印机连接监听**

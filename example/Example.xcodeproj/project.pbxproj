@@ -13,8 +13,6 @@
 		314193162125408A0074144B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 314193152125408A0074144B /* Assets.xcassets */; };
 		314193192125408A0074144B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 314193172125408A0074144B /* LaunchScreen.storyboard */; };
 		31419322212546770074144B /* SDKMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31419321212546770074144B /* SDKMainController.swift */; };
-		31419324212548F10074144B /* Trimkeeper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31419323212548EB0074144B /* Trimkeeper.framework */; };
-		31419325212548F10074144B /* Trimkeeper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 31419323212548EB0074144B /* Trimkeeper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3141932D212549640074144B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 314193292125492D0074144B /* Alamofire.framework */; };
 		3141932E212549640074144B /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 314193292125492D0074144B /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3141932F212549640074144B /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 314193282125492D0074144B /* CocoaAsyncSocket.framework */; };
@@ -24,6 +22,8 @@
 		314193352125541D0074144B /* TemplateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314193332125541D0074144B /* TemplateController.swift */; };
 		314193362125541D0074144B /* TemplatesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314193342125541D0074144B /* TemplatesController.swift */; };
 		31419338212572D00074144B /* Address.plist in Resources */ = {isa = PBXBuildFile; fileRef = 31419337212572D00074144B /* Address.plist */; };
+		31FED3AE214F928300A1A580 /* Trimkeeper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FED3AD214F927700A1A580 /* Trimkeeper.framework */; };
+		31FED3AF214F928300A1A580 /* Trimkeeper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 31FED3AD214F927700A1A580 /* Trimkeeper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,9 +33,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				31FED3AF214F928300A1A580 /* Trimkeeper.framework in Embed Frameworks */,
 				31419332212549640074144B /* RxSwift.framework in Embed Frameworks */,
 				31419330212549640074144B /* CocoaAsyncSocket.framework in Embed Frameworks */,
-				31419325212548F10074144B /* Trimkeeper.framework in Embed Frameworks */,
 				3141932E212549640074144B /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -52,13 +52,13 @@
 		314193182125408A0074144B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3141931A2125408A0074144B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31419321212546770074144B /* SDKMainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKMainController.swift; sourceTree = "<group>"; };
-		31419323212548EB0074144B /* Trimkeeper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Trimkeeper.framework; path = ../sdk/Trimkeeper.framework; sourceTree = "<group>"; };
 		314193272125492D0074144B /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		314193282125492D0074144B /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = Carthage/Build/iOS/CocoaAsyncSocket.framework; sourceTree = "<group>"; };
 		314193292125492D0074144B /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		314193332125541D0074144B /* TemplateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateController.swift; sourceTree = "<group>"; };
 		314193342125541D0074144B /* TemplatesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplatesController.swift; sourceTree = "<group>"; };
 		31419337212572D00074144B /* Address.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Address.plist; sourceTree = "<group>"; };
+		31FED3AD214F927700A1A580 /* Trimkeeper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Trimkeeper.framework; path = ../sdk/Trimkeeper.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,9 +66,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31FED3AE214F928300A1A580 /* Trimkeeper.framework in Frameworks */,
 				31419331212549640074144B /* RxSwift.framework in Frameworks */,
 				3141932F212549640074144B /* CocoaAsyncSocket.framework in Frameworks */,
-				31419324212548F10074144B /* Trimkeeper.framework in Frameworks */,
 				3141932D212549640074144B /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -79,7 +79,7 @@
 		31419302212540890074144B = {
 			isa = PBXGroup;
 			children = (
-				31419323212548EB0074144B /* Trimkeeper.framework */,
+				31FED3AD214F927700A1A580 /* Trimkeeper.framework */,
 				314193292125492D0074144B /* Alamofire.framework */,
 				314193282125492D0074144B /* CocoaAsyncSocket.framework */,
 				314193272125492D0074144B /* RxSwift.framework */,
@@ -347,7 +347,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/../sdk",
+					"$(PROJECT_DIR)/../sdk/",
 				);
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -370,7 +370,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/../sdk",
+					"$(PROJECT_DIR)/../sdk/",
 				);
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
