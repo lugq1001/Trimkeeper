@@ -36,7 +36,7 @@ class RegisterController: UIViewController {
             wself.iRegisterButton.isEnabled = true
             if let error = trimkeeperError {
                 // 注册失败
-                wself.showAlert("Register Failed", error.description)
+                wself.showAlert("Register Failed", error.message)
                 return
             }
             wself.performSegue(withIdentifier: "SDKMain", sender: self)

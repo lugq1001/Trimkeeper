@@ -25,7 +25,7 @@ AppSecret: 分配的渠道密钥
 Trimkeeper.shared.register(appID: xxxxxx, appSecret: xxxxxx) { trimkeeperError in
 	if let error = trimkeeperError {
 		// 注册失败
-		print(error.description)
+		print(error.message)
 	} else {
 		// 注册成功
 		// ...
@@ -45,7 +45,7 @@ do {
 	try Trimkeeper.shared.connectPrinter(printer)
 } catch let error {
 	//连接失败
-	print(error.toTrimkeeperError.description)
+	print(error.localizedDescription)
 }
 ```
 
@@ -59,7 +59,7 @@ sdk会自动保存资源文件至磁盘。<br>
 Trimkeeper.shared.updateAssets { trimkeeperError in
 	if let error = trimkeeperError {
 		// 更新失败
-		print(error.description)
+		print(error.message)
 	} else {
 		// 更新成功
 		// ...
@@ -75,7 +75,7 @@ Trimkeeper.shared.updateAssets { trimkeeperError in
 Trimkeeper.shared.sendAssetsToPrinter{ trimkeeperError in
 	if let error = trimkeeperError {
 		// 发送失败
-		print(error.description)
+		print(error.message)
 	} else {
 		// 发送成功
 		// ...
@@ -98,7 +98,7 @@ do {
 	try Trimkeeper.shared.print(templates: formats)
 } catch let error {
 	// 失败
-	print(error.toTrimkeeperError.description)
+	print(error.localizedDescription)
 }
 
 ```
@@ -119,8 +119,8 @@ func trimkeeper(didConnectTo printer: Printer) {
 打印机断开连接
 
 ```swift
-func trimkeeper(didDisconnectTo printer: Printer, withError error: TrimkeeperError) {
-	print("打印机 \(printer) 连接失败 \(error.description)")
+func trimkeeper(didDisconnectTo printer: Printer, withError error: TKError) {
+	print("打印机 \(printer) 连接失败 \(error.message)")
 	// ...
 }
 
@@ -136,6 +136,10 @@ func trimkeeper(didDisconnectTo printer: Printer, withError error: TrimkeeperErr
 
 
 ## CHANGELOG
+
+> ## [1.0.2](https://github.com/lugq1001/Trimkeeper) (2018-09-19)
+>
+> **增加Object-c调用demo**
 
 > ## [1.0.1](https://github.com/lugq1001/Trimkeeper) (2018-09-17)
 >

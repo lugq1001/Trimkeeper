@@ -39,7 +39,7 @@ class SDKMainController: UIViewController {
                 
             } catch let error {
                 self?.iPrinterButton.isEnabled = true
-                self?.showAlert("打印机连接失败", error.toTrimkeeperError.description)
+                self?.showAlert("打印机连接失败", error.localizedDescription)
             }
         }
     }
@@ -52,7 +52,7 @@ class SDKMainController: UIViewController {
         Trimkeeper.shared.updateAssets { [weak self] (trimkeeperError) in
             if let error = trimkeeperError {
                 self?.iUpdateAssetButton.isEnabled = true
-                self?.showAlert("下载资源失败", error.description)
+                self?.showAlert("下载资源失败", error.message)
             } else {
                 self?.iUpdateAssetButton.isEnabled = false
                 self?.iUpdateAssetButton.setTitle("资源更新成功", for: .normal)
@@ -68,7 +68,7 @@ class SDKMainController: UIViewController {
         Trimkeeper.shared.sendAssetsToPrinter{ [weak self] (trimkeeperError) in
             if let error = trimkeeperError {
                 self?.iSendAssetButton.isEnabled = true
-                self?.showAlert("发送打印机资源失败", error.description)
+                self?.showAlert("发送打印机资源失败", error.message)
             } else {
                 self?.iSendAssetButton.isEnabled = false
                 self?.iSendAssetButton.setTitle("资源已发送至打印机", for: .normal)
@@ -90,12 +90,10 @@ extension SDKMainController: TrimkeeperDelegate {
         print("打印机 \(printer) 连接成功")
         self.iPrinterButton.isEnabled = false
         self.iPrinterButton.setTitle("\(printer.host):\(printer.port)", for: .normal)
-        
     }
     
-    /// 打印机断开连接后会进入此方法
-    func trimkeeper(didDisconnectTo printer: Printer, withError error: TrimkeeperError) {
-        print("打印机 \(printer) 连接失败 \(error.description)")
+    func trimkeeper(didDisconnectTo printer: Printer, withError error: TKError) {
+        print("打印机 \(printer) 连接失败 \(error.message)")
         self.iPrinterButton.isEnabled = true
         self.iPrinterButton.setTitle("连接打印机", for: .normal)
     }

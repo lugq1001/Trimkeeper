@@ -88,7 +88,7 @@ extension TemplateController {
         do {
             try Trimkeeper.shared.print(templates: formats)
         } catch let error {
-            showAlert("打印失败", error.toTrimkeeperError.description)
+            showAlert("打印失败", error.localizedDescription)
         }
     }
     

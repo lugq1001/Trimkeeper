@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		311CAACA2152290400C6AC20 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 311CAAC7215228FE00C6AC20 /* Alamofire.framework */; };
+		311CAACB2152290400C6AC20 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 311CAAC7215228FE00C6AC20 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		311CAACC2152290400C6AC20 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 311CAAC9215228FE00C6AC20 /* CocoaAsyncSocket.framework */; };
+		311CAACD2152290400C6AC20 /* CocoaAsyncSocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 311CAAC9215228FE00C6AC20 /* CocoaAsyncSocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		311CAACE2152290400C6AC20 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 311CAAC8215228FE00C6AC20 /* RxSwift.framework */; };
+		311CAACF2152290400C6AC20 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 311CAAC8215228FE00C6AC20 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3141930F2125408A0074144B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3141930E2125408A0074144B /* AppDelegate.swift */; };
 		314193112125408A0074144B /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314193102125408A0074144B /* RegisterController.swift */; };
 		314193142125408A0074144B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 314193122125408A0074144B /* Main.storyboard */; };
 		314193162125408A0074144B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 314193152125408A0074144B /* Assets.xcassets */; };
 		314193192125408A0074144B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 314193172125408A0074144B /* LaunchScreen.storyboard */; };
 		31419322212546770074144B /* SDKMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31419321212546770074144B /* SDKMainController.swift */; };
-		3141932D212549640074144B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 314193292125492D0074144B /* Alamofire.framework */; };
-		3141932E212549640074144B /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 314193292125492D0074144B /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3141932F212549640074144B /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 314193282125492D0074144B /* CocoaAsyncSocket.framework */; };
-		31419330212549640074144B /* CocoaAsyncSocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 314193282125492D0074144B /* CocoaAsyncSocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		31419331212549640074144B /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 314193272125492D0074144B /* RxSwift.framework */; };
-		31419332212549640074144B /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 314193272125492D0074144B /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		314193352125541D0074144B /* TemplateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314193332125541D0074144B /* TemplateController.swift */; };
 		314193362125541D0074144B /* TemplatesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314193342125541D0074144B /* TemplatesController.swift */; };
 		31419338212572D00074144B /* Address.plist in Resources */ = {isa = PBXBuildFile; fileRef = 31419337212572D00074144B /* Address.plist */; };
@@ -33,10 +33,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				311CAACF2152290400C6AC20 /* RxSwift.framework in Embed Frameworks */,
+				311CAACD2152290400C6AC20 /* CocoaAsyncSocket.framework in Embed Frameworks */,
 				31FED3AF214F928300A1A580 /* Trimkeeper.framework in Embed Frameworks */,
-				31419332212549640074144B /* RxSwift.framework in Embed Frameworks */,
-				31419330212549640074144B /* CocoaAsyncSocket.framework in Embed Frameworks */,
-				3141932E212549640074144B /* Alamofire.framework in Embed Frameworks */,
+				311CAACB2152290400C6AC20 /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -44,6 +44,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		311CAAC7215228FE00C6AC20 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = ../Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		311CAAC8215228FE00C6AC20 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		311CAAC9215228FE00C6AC20 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = ../Carthage/Build/iOS/CocoaAsyncSocket.framework; sourceTree = "<group>"; };
+		311CAAE621523ED400C6AC20 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		3141930B2125408A0074144B /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3141930E2125408A0074144B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		314193102125408A0074144B /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
@@ -52,9 +56,6 @@
 		314193182125408A0074144B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3141931A2125408A0074144B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31419321212546770074144B /* SDKMainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKMainController.swift; sourceTree = "<group>"; };
-		314193272125492D0074144B /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
-		314193282125492D0074144B /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = Carthage/Build/iOS/CocoaAsyncSocket.framework; sourceTree = "<group>"; };
-		314193292125492D0074144B /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		314193332125541D0074144B /* TemplateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateController.swift; sourceTree = "<group>"; };
 		314193342125541D0074144B /* TemplatesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplatesController.swift; sourceTree = "<group>"; };
 		31419337212572D00074144B /* Address.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Address.plist; sourceTree = "<group>"; };
@@ -66,10 +67,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				311CAACE2152290400C6AC20 /* RxSwift.framework in Frameworks */,
+				311CAACC2152290400C6AC20 /* CocoaAsyncSocket.framework in Frameworks */,
 				31FED3AE214F928300A1A580 /* Trimkeeper.framework in Frameworks */,
-				31419331212549640074144B /* RxSwift.framework in Frameworks */,
-				3141932F212549640074144B /* CocoaAsyncSocket.framework in Frameworks */,
-				3141932D212549640074144B /* Alamofire.framework in Frameworks */,
+				311CAACA2152290400C6AC20 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,12 +80,13 @@
 		31419302212540890074144B = {
 			isa = PBXGroup;
 			children = (
+				311CAAC7215228FE00C6AC20 /* Alamofire.framework */,
+				311CAAC9215228FE00C6AC20 /* CocoaAsyncSocket.framework */,
+				311CAAC8215228FE00C6AC20 /* RxSwift.framework */,
 				31FED3AD214F927700A1A580 /* Trimkeeper.framework */,
-				314193292125492D0074144B /* Alamofire.framework */,
-				314193282125492D0074144B /* CocoaAsyncSocket.framework */,
-				314193272125492D0074144B /* RxSwift.framework */,
 				3141930D2125408A0074144B /* Example */,
 				3141930C2125408A0074144B /* Products */,
+				311CAAE621523ED400C6AC20 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -154,6 +156,7 @@
 				TargetAttributes = {
 					3141930A212540890074144B = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -346,7 +349,7 @@
 				DEVELOPMENT_TEAM = QR2ZFRE3WH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/../Carthage/Build/iOS",
 					"$(PROJECT_DIR)/../sdk/",
 				);
 				INFOPLIST_FILE = Example/Info.plist;
@@ -356,7 +359,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.trimkeeper.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -369,7 +372,7 @@
 				DEVELOPMENT_TEAM = QR2ZFRE3WH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/../Carthage/Build/iOS",
 					"$(PROJECT_DIR)/../sdk/",
 				);
 				INFOPLIST_FILE = Example/Info.plist;
@@ -379,7 +382,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.trimkeeper.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
