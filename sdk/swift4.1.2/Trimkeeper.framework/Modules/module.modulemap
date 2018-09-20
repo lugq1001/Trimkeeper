@@ -1,0 +1,11 @@
+framework module Trimkeeper {
+  umbrella header "Trimkeeper.h"
+
+  export *
+  module * { export * }
+}
+
+module Trimkeeper.Swift {
+    header "Trimkeeper-Swift.h"
+    requires objc
+}
