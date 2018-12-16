@@ -13,9 +13,6 @@
 		311CAA9821521CA500C6AC20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 311CAA9721521CA500C6AC20 /* Assets.xcassets */; };
 		311CAA9B21521CA500C6AC20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 311CAA9921521CA500C6AC20 /* LaunchScreen.storyboard */; };
 		311CAA9E21521CA500C6AC20 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 311CAA9D21521CA500C6AC20 /* main.m */; };
-		311CAADE21522C9700C6AC20 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 311CAAC4215226FD00C6AC20 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		311CAAE021522C9700C6AC20 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 311CAAB12152236A00C6AC20 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		311CAAE221522C9700C6AC20 /* CocoaAsyncSocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 311CAAB32152236A00C6AC20 /* CocoaAsyncSocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		311CAAF3215260E200C6AC20 /* Trimkeeper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 311CAAF2215260DC00C6AC20 /* Trimkeeper.framework */; };
 		311CAAF4215260E200C6AC20 /* Trimkeeper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 311CAAF2215260DC00C6AC20 /* Trimkeeper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -28,9 +25,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				311CAAF4215260E200C6AC20 /* Trimkeeper.framework in Embed Frameworks */,
-				311CAAE221522C9700C6AC20 /* CocoaAsyncSocket.framework in Embed Frameworks */,
-				311CAADE21522C9700C6AC20 /* RxSwift.framework in Embed Frameworks */,
-				311CAAE021522C9700C6AC20 /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -48,9 +42,6 @@
 		311CAA9A21521CA500C6AC20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		311CAA9C21521CA500C6AC20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		311CAA9D21521CA500C6AC20 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		311CAAB12152236A00C6AC20 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = ../Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		311CAAB32152236A00C6AC20 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = ../Carthage/Build/iOS/CocoaAsyncSocket.framework; sourceTree = "<group>"; };
-		311CAAC4215226FD00C6AC20 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		311CAAF2215260DC00C6AC20 /* Trimkeeper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Trimkeeper.framework; path = ../sdk/Trimkeeper.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,9 +61,6 @@
 			isa = PBXGroup;
 			children = (
 				311CAAF2215260DC00C6AC20 /* Trimkeeper.framework */,
-				311CAAC4215226FD00C6AC20 /* RxSwift.framework */,
-				311CAAB12152236A00C6AC20 /* Alamofire.framework */,
-				311CAAB32152236A00C6AC20 /* CocoaAsyncSocket.framework */,
 				311CAA8D21521CA400C6AC20 /* example-objc */,
 				311CAA8C21521CA400C6AC20 /* Products */,
 			);
@@ -316,7 +304,6 @@
 		311CAAA221521CA500C6AC20 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RX6HV9CQ5K;
@@ -341,7 +328,6 @@
 		311CAAA321521CA500C6AC20 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RX6HV9CQ5K;
