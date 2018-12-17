@@ -16,6 +16,12 @@
 		311CAA9E21521CA500C6AC20 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 311CAA9D21521CA500C6AC20 /* main.m */; };
 		311CAAF3215260E200C6AC20 /* Trimkeeper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 311CAAF2215260DC00C6AC20 /* Trimkeeper.framework */; };
 		311CAAF4215260E200C6AC20 /* Trimkeeper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 311CAAF2215260DC00C6AC20 /* Trimkeeper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		31C7E4A121C7F2C800009781 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31C7E49E21C7F2BF00009781 /* Alamofire.framework */; };
+		31C7E4A221C7F2C800009781 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 31C7E49E21C7F2BF00009781 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		31C7E4A321C7F2C800009781 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31C7E49F21C7F2BF00009781 /* CocoaAsyncSocket.framework */; };
+		31C7E4A421C7F2C800009781 /* CocoaAsyncSocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 31C7E49F21C7F2BF00009781 /* CocoaAsyncSocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		31C7E4A521C7F2C800009781 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31C7E4A021C7F2C000009781 /* RxSwift.framework */; };
+		31C7E4A621C7F2C800009781 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 31C7E4A021C7F2C000009781 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,7 +31,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				31C7E4A621C7F2C800009781 /* RxSwift.framework in Embed Frameworks */,
+				31C7E4A421C7F2C800009781 /* CocoaAsyncSocket.framework in Embed Frameworks */,
 				311CAAF4215260E200C6AC20 /* Trimkeeper.framework in Embed Frameworks */,
+				31C7E4A221C7F2C800009781 /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,6 +54,9 @@
 		311CAA9C21521CA500C6AC20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		311CAA9D21521CA500C6AC20 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		311CAAF2215260DC00C6AC20 /* Trimkeeper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Trimkeeper.framework; path = ../sdk/Trimkeeper.framework; sourceTree = "<group>"; };
+		31C7E49E21C7F2BF00009781 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = ../Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		31C7E49F21C7F2BF00009781 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = ../Carthage/Build/iOS/CocoaAsyncSocket.framework; sourceTree = "<group>"; };
+		31C7E4A021C7F2C000009781 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		97F1DD21D304F2AA25D7B174 /* Pods-example-objc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-example-objc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-example-objc/Pods-example-objc.debug.xcconfig"; sourceTree = "<group>"; };
 		F5D438FE70AFDF792BAB008B /* Pods-example-objc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-example-objc.release.xcconfig"; path = "Pods/Target Support Files/Pods-example-objc/Pods-example-objc.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -54,7 +66,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31C7E4A521C7F2C800009781 /* RxSwift.framework in Frameworks */,
 				311CAAF3215260E200C6AC20 /* Trimkeeper.framework in Frameworks */,
+				31C7E4A121C7F2C800009781 /* Alamofire.framework in Frameworks */,
+				31C7E4A321C7F2C800009781 /* CocoaAsyncSocket.framework in Frameworks */,
 				2486778B3280B3FFE9F66EBC /* Pods_example_objc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,6 +80,9 @@
 		311CAA8221521CA400C6AC20 = {
 			isa = PBXGroup;
 			children = (
+				31C7E49E21C7F2BF00009781 /* Alamofire.framework */,
+				31C7E49F21C7F2BF00009781 /* CocoaAsyncSocket.framework */,
+				31C7E4A021C7F2C000009781 /* RxSwift.framework */,
 				311CAAF2215260DC00C6AC20 /* Trimkeeper.framework */,
 				311CAA8D21521CA400C6AC20 /* example-objc */,
 				311CAA8C21521CA400C6AC20 /* Products */,
@@ -385,7 +403,9 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/../sdk/",
 					"$(PROJECT_DIR)/../Carthage/Build/iOS",
+					"$(inherited)",
 				);
+				GCC_OPTIMIZATION_LEVEL = 0;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "example-objc/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -411,7 +431,9 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/../sdk/",
 					"$(PROJECT_DIR)/../Carthage/Build/iOS",
+					"$(inherited)",
 				);
+				GCC_OPTIMIZATION_LEVEL = s;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "example-objc/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
