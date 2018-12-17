@@ -35,50 +35,23 @@ class TemplateController: UIViewController {
 extension TemplateController {
     
     private func print(copies: Int) {
-        let address = loadAddreas()
-        
         var formats: [TKTemplateFormat] = []
-        
         for _ in 0..<copies {
-            let format = TKTemplateFormat(templateName: template.name)
+            var format: TKTemplateFormat?
             if template.name == "sf_001" {
                 // 使用假数据打印顺丰运单，模拟真实环境，详细占位符说明见 ${TKTemplate.previewUrl}
-                
-                // 随机地址
-                let random = Int(arc4random_uniform(UInt32(address.count)))
-                let addr = address[random]
-                
-                format.add(qr: "100100101", forPlaceholder: "V1")
-                format.add(variable: "100100101", forPlaceholder: "V2")
-                format.add(qr: "100100102", forPlaceholder: "V3")
-                format.add(variable: "100100102", forPlaceholder: "V4")
-                format.add(qr: "100100103", forPlaceholder: "V5")
-                format.add(variable: "100100103", forPlaceholder: "V6")
-                
-                format.add(encodingVariable: "顺丰次日", forPlaceholder: "V7")
-                format.add(encodingVariable: "679仓库", forPlaceholder: "V8")
-                
-                format.add(encodingVariable: "衣服", forPlaceholder: "V13")
-                format.add(encodingVariable: "转协议客户", forPlaceholder: "V14")
-                
-                let send = "优衣库网购物流中心 0295 分仓"
-                format.add(encodingVariable: send, forPlaceholder: "V12")
-                format.add(encodingVariable: send, forPlaceholder: "V15")
-                format.add(encodingVariable: send, forPlaceholder: "V19")
-                
-                format.add(encodingVariable: addr.area, forPlaceholder: "V9")
-                format.add(encodingVariable: addr.street, forPlaceholder: "V10")
-                format.add(encodingVariable: addr.name, forPlaceholder: "V11")
-                
-                format.add(encodingVariable: addr.area, forPlaceholder: "V16")
-                format.add(encodingVariable: addr.street, forPlaceholder: "V17")
-                format.add(encodingVariable: addr.name, forPlaceholder: "V18")
-                
-                format.add(encodingVariable: addr.area, forPlaceholder: "V20")
-                format.add(encodingVariable: addr.street, forPlaceholder: "V21")
-                format.add(encodingVariable: addr.name, forPlaceholder: "V22")
+                format = makeSF001()
+            } else if template.name == "UA_Welcome" { // UA欢迎页
+                format = makeUAWelcome()
+            } else if template.name == "UA_Packing_List" { // UA装箱单
+                format = makeUAPackingList()
+            } else if template.name == "UA_SF" { // UA顺丰单
+                format = makeUASF()
             }
-            formats.append(format)
+            
+            if let f = format {
+                formats.append(f)
+            }
         }
         
         if formats.isEmpty {
@@ -90,6 +63,112 @@ extension TemplateController {
         } catch let error {
             showAlert("打印失败", error.localizedDescription)
         }
+    }
+    
+    private func makeSF001() -> TKTemplateFormat {
+        let address = loadAddreas()
+        let format = TKTemplateFormat(templateName: "sf_001")
+        // 使用假数据打印顺丰运单，模拟真实环境，详细占位符说明见 ${TKTemplate.previewUrl}
+        
+        // 随机地址
+        let random = Int(arc4random_uniform(UInt32(address.count)))
+        let addr = address[random]
+        
+        format.add(qr: "100100101", forPlaceholder: "V1")
+        format.add(variable: "100100101", forPlaceholder: "V2")
+        format.add(qr: "100100102", forPlaceholder: "V3")
+        format.add(variable: "100100102", forPlaceholder: "V4")
+        format.add(qr: "100100103", forPlaceholder: "V5")
+        format.add(variable: "100100103", forPlaceholder: "V6")
+        
+        format.add(encodingVariable: "顺丰次日", forPlaceholder: "V7")
+        format.add(encodingVariable: "679仓库", forPlaceholder: "V8")
+        
+        format.add(encodingVariable: "衣服", forPlaceholder: "V13")
+        format.add(encodingVariable: "转协议客户", forPlaceholder: "V14")
+        
+        let send = "优衣库网购物流中心 0295 分仓"
+        format.add(encodingVariable: send, forPlaceholder: "V12")
+        format.add(encodingVariable: send, forPlaceholder: "V15")
+        format.add(encodingVariable: send, forPlaceholder: "V19")
+        
+        format.add(encodingVariable: addr.area, forPlaceholder: "V9")
+        format.add(encodingVariable: addr.street, forPlaceholder: "V10")
+        format.add(encodingVariable: addr.name, forPlaceholder: "V11")
+        
+        format.add(encodingVariable: addr.area, forPlaceholder: "V16")
+        format.add(encodingVariable: addr.street, forPlaceholder: "V17")
+        format.add(encodingVariable: addr.name, forPlaceholder: "V18")
+        
+        format.add(encodingVariable: addr.area, forPlaceholder: "V20")
+        format.add(encodingVariable: addr.street, forPlaceholder: "V21")
+        format.add(encodingVariable: addr.name, forPlaceholder: "V22")
+        return format
+    }
+
+    // UA欢迎页
+    private func makeUAWelcome() -> TKTemplateFormat {
+        let format = TKTemplateFormat(templateName: "UA_Welcome")
+        format.add(encodingVariable: "欢迎使用驻店宝！", forPlaceholder: "V1")
+        return format
+    }
+    
+    // UA装箱单
+    private func makeUAPackingList() -> TKTemplateFormat {
+        let format = TKTemplateFormat(templateName: "UA_Packing_List")
+        format.add(encodingVariable: "张三", forPlaceholder: "V1")
+        format.add(variable: "12345678", forPlaceholder: "V2")
+        format.add(variable: "13456876786", forPlaceholder: "V3")
+        format.add(barCode: "UA20180101123232", forPlaceholder: "V4")
+        
+        format.add(variable: "1234567890", forPlaceholder: "V5")
+        format.add(encodingVariable: "男子Sport短裤", forPlaceholder: "V6")
+        format.add(variable: "1", forPlaceholder: "V7")
+        
+        format.add(variable: "1234567890", forPlaceholder: "V8")
+        format.add(encodingVariable: "男子Sport短裤", forPlaceholder: "V9")
+        format.add(variable: "2", forPlaceholder: "V10")
+        
+        format.add(variable: "1234567890", forPlaceholder: "V11")
+        format.add(encodingVariable: "男子Sport短裤", forPlaceholder: "V12")
+        format.add(variable: "3", forPlaceholder: "V13")
+        
+        format.add(variable: "1234567890", forPlaceholder: "V14")
+        format.add(encodingVariable: "男子Sport短裤", forPlaceholder: "V15")
+        format.add(variable: "4", forPlaceholder: "V16")
+        
+        format.add(variable: "1234567890", forPlaceholder: "V17")
+        format.add(encodingVariable: "男子Sport短裤", forPlaceholder: "V18")
+        format.add(variable: "5", forPlaceholder: "V19")
+        
+        format.add(variable: "200", forPlaceholder: "V20")
+        format.add(qr: "Supreme", forPlaceholder: "V21")
+        return format
+    }
+    
+    // UA顺丰单
+    private func makeUASF() -> TKTemplateFormat {
+        let format = TKTemplateFormat(templateName: "UA_SF")
+        format.add(barCode: "1234567890", forPlaceholder: "V1")
+        format.add(variable: "1234567890", forPlaceholder: "V2")
+        format.add(encodingVariable: "顺丰次日", forPlaceholder: "V3")
+        format.add(variable: "021", forPlaceholder: "V4")
+        format.add(encodingVariable: "上海市黄浦区西藏南路123号-2楼", forPlaceholder: "V5")
+        format.add(encodingVariable: "商悦青年会大酒店 33059999", forPlaceholder: "V6")
+        format.add(encodingVariable: "上海市黄浦区武胜路330号", forPlaceholder: "V7")
+        format.add(encodingVariable: "黄浦区人民广场地区市容环境协管队", forPlaceholder: "V8")
+        format.add(variable: "1000000", forPlaceholder: "V9")
+        format.add(variable: "12", forPlaceholder: "V10")
+        format.add(variable: "12", forPlaceholder: "V11")
+        format.add(barCode: "1234567890", forPlaceholder: "V12")
+        format.add(variable: "1234567890", forPlaceholder: "V13")
+        format.add(encodingVariable: "上海市黄浦区武胜路330号", forPlaceholder: "V14")
+        format.add(encodingVariable: "黄浦区人民广场地区市容环境协管队", forPlaceholder: "V15")
+        format.add(encodingVariable: "上海市黄浦区西藏南路123号-2楼", forPlaceholder: "V16")
+        format.add(encodingVariable: "商悦青年会大酒店 33059999", forPlaceholder: "V17")
+        format.add(barCode: "1234567890", forPlaceholder: "V18")
+        format.add(variable: "1234567890", forPlaceholder: "V19")
+        return format
     }
     
     private func loadAddreas() -> [Address] {
