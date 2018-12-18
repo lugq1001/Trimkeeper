@@ -137,6 +137,10 @@ func trimkeeper(didDisconnectTo printer: Printer, withError error: TKError) {
 
 ## CHANGELOG
 
+> ## [1.0.3](https://github.com/lugq1001/Trimkeeper) (2018-12-18)
+>
+> **Object-c Demo加入cocoapods演示**
+
 > ## [1.0.2](https://github.com/lugq1001/Trimkeeper) (2018-09-19)
 >
 > **增加Object-c调用demo**

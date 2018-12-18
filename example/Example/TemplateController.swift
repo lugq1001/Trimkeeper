@@ -41,11 +41,11 @@ extension TemplateController {
             if template.name == "sf_001" {
                 // 使用假数据打印顺丰运单，模拟真实环境，详细占位符说明见 ${TKTemplate.previewUrl}
                 format = makeSF001()
-            } else if template.name == "ua_welcome" { // UA欢迎页
+            } else if template.name == "UA_Welcome" { // UA欢迎页
                 format = makeUAWelcome()
-            } else if template.name == "ua_packing_list" { // UA装箱单
+            } else if template.name == "UA_Packing_List" { // UA装箱单
                 format = makeUAPackingList()
-            } else if template.name == "ua_sf" { // UA顺丰单
+            } else if template.name == "UA_SF" { // UA顺丰单
                 format = makeUASF()
             }
             
@@ -108,14 +108,14 @@ extension TemplateController {
 
     // UA欢迎页
     private func makeUAWelcome() -> TKTemplateFormat {
-        let format = TKTemplateFormat(templateName: "ua_welcome")
+        let format = TKTemplateFormat(templateName: "UA_Welcome")
         format.add(encodingVariable: "欢迎使用驻店宝！", forPlaceholder: "V1")
         return format
     }
     
     // UA装箱单
     private func makeUAPackingList() -> TKTemplateFormat {
-        let format = TKTemplateFormat(templateName: "ua_packing_list")
+        let format = TKTemplateFormat(templateName: "UA_Packing_List")
         format.add(encodingVariable: "张三", forPlaceholder: "V1")
         format.add(variable: "12345678", forPlaceholder: "V2")
         format.add(variable: "13456876786", forPlaceholder: "V3")
@@ -148,7 +148,7 @@ extension TemplateController {
     
     // UA顺丰单
     private func makeUASF() -> TKTemplateFormat {
-        let format = TKTemplateFormat(templateName: "ua_sf")
+        let format = TKTemplateFormat(templateName: "UA_SF")
         format.add(barCode: "1234567890", forPlaceholder: "V1")
         format.add(variable: "1234567890", forPlaceholder: "V2")
         format.add(encodingVariable: "顺丰次日", forPlaceholder: "V3")
