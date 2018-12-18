@@ -33,7 +33,7 @@ Trimkeeper *trimkeeper;
 ///注册sdk
 - (void)registerSDK {
     
-    [trimkeeper registerWithAppID:@"AppID" appSecret:@"AppSecret" completion:^(TKError *error) {
+    [trimkeeper registerWithAppID:@"UnderArmour" appSecret:@"e5v42yzolq" completion:^(TKError *error) {
         if (error) {
             NSLog(@"注册失败: %@(%ld)", error.message, error.type);
         } else {
