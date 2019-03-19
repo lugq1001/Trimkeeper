@@ -116,32 +116,32 @@ extension TemplateController {
     // UA装箱单
     private func makeUAPackingList() -> TKTemplateFormat {
         let format = TKTemplateFormat(templateName: "UA_Packing_List")
-        format.add(encodingVariable: "张三", forPlaceholder: "V1")
-        format.add(variable: "12345678", forPlaceholder: "V2")
+        format.add(encodingVariable: "张三李四王五赵六", forPlaceholder: "V1")
+        format.add(variable: "12345678901234567890123456", forPlaceholder: "V2")
         format.add(variable: "13456876786", forPlaceholder: "V3")
         format.add(barCode: "UA20180101123232", forPlaceholder: "V4")
         
-        format.add(variable: "1234567890", forPlaceholder: "V5")
-        format.add(encodingVariable: "男子Sport短裤", forPlaceholder: "V6")
-        format.add(variable: "1", forPlaceholder: "V7")
+        format.add(variable: "12345678901234567890", forPlaceholder: "V5")
+        format.add(encodingVariable: "男子Sport短裤 男子Sport短裤 男子Sport短裤", forPlaceholder: "V6")
+        format.add(variable: "5000", forPlaceholder: "V7")
         
         format.add(variable: "1234567890", forPlaceholder: "V8")
-        format.add(encodingVariable: "男子Sport短裤", forPlaceholder: "V9")
-        format.add(variable: "2", forPlaceholder: "V10")
+        format.add(encodingVariable: "男子Sport短裤 男子Sport短裤 男子Sport短裤", forPlaceholder: "V9")
+        format.add(variable: "5000", forPlaceholder: "V10")
         
         format.add(variable: "1234567890", forPlaceholder: "V11")
-        format.add(encodingVariable: "男子Sport短裤", forPlaceholder: "V12")
-        format.add(variable: "3", forPlaceholder: "V13")
+        format.add(encodingVariable: "男子Sport短裤 男子Sport短裤 男子Sport短裤", forPlaceholder: "V12")
+        format.add(variable: "5000", forPlaceholder: "V13")
         
         format.add(variable: "1234567890", forPlaceholder: "V14")
-        format.add(encodingVariable: "男子Sport短裤", forPlaceholder: "V15")
-        format.add(variable: "4", forPlaceholder: "V16")
+        format.add(encodingVariable: "男子Sport短裤 男子Sport短裤 男子Sport短裤", forPlaceholder: "V15")
+        format.add(variable: "5000", forPlaceholder: "V16")
         
         format.add(variable: "1234567890", forPlaceholder: "V17")
-        format.add(encodingVariable: "男子Sport短裤", forPlaceholder: "V18")
-        format.add(variable: "5", forPlaceholder: "V19")
+        format.add(encodingVariable: "男子Sport短裤 男子Sport短裤 男子Sport短裤", forPlaceholder: "V18")
+        format.add(variable: "5000", forPlaceholder: "V19")
         
-        format.add(variable: "200", forPlaceholder: "V20")
+        format.add(variable: "10000", forPlaceholder: "V20")
         format.add(qr: "Supreme", forPlaceholder: "V21")
         return format
     }
