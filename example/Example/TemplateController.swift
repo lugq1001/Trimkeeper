@@ -142,7 +142,8 @@ extension TemplateController {
         format.add(variable: "5000", forPlaceholder: "V19")
         
         format.add(variable: "10000", forPlaceholder: "V20")
-        format.add(qr: "Supreme", forPlaceholder: "V21")
+        format.add(qr: "https://www.underarmour.com/en-us/", forPlaceholder: "V21")
+        format.add(encodingVariable: "Under Armour官方旗舰店 - 京东", forPlaceholder: "V22")
         return format
     }
     
