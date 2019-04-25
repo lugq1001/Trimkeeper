@@ -1,5 +1,5 @@
 # https://github.com/Alamofire/Alamofire
-github "Alamofire/Alamofire" ~> 4.7
+github "Alamofire/Alamofire" ~> 4.8.2
 
 # https://github.com/ReactiveX/RxSwift
 github "ReactiveX/RxSwift" ~> 4.0
