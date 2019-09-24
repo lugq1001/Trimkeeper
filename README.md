@@ -4,7 +4,7 @@ Trimkeeper打印SDK
 
 ## 示例项目
 
-在example文件夹下有个示例项目. 使用前, 请运行 `carthage update` 来下载需要的库。
+在example文件夹下有个示例项目. 使用前, 请运行 `carthage update --platform iOS --no-use-binaries` 来下载需要的库。
 
 ## 安装
 
@@ -134,8 +134,10 @@ func trimkeeper(didDisconnectTo printer: Printer, withError error: TKError) {
 其中${V?}表示占位符号，接入时传入打印变量，sdk会将变量打印至对应的占位符中。<br>
 如使用`format.add(encodingVariable: "上海", forPlaceholder: "V8")`，最终打印结果会在V8的位置打印"上海"
 
-
 ## CHANGELOG
+> ## [1.0.5](https://github.com/lugq1001/Trimkeeper) (2019-09-24)
+> 
+> **swift5.1支持**
 > ## [1.0.4](https://github.com/lugq1001/Trimkeeper) (2019-04-25)
 >
 > **swift5支持**
